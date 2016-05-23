@@ -55,7 +55,6 @@
     "babel-preset-react-hmre": "^1.0.1",
     "babel-preset-react-optimize": "^1.0.1",
     "babel-preset-stage-0": "6.5.0",
-    "babel-preset-stage-1": "^6.3.13",
     "css-loader": "^0.23.0",
     "css-modularscale": "1.0.0",
     "dateformat": "1.0.12",
@@ -65,7 +64,6 @@
     "eslint-plugin-react": "^4.3.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.1",
-    "format-date": "1.0.0",
     "history": "^2.0.0",
     "invariant": "^2.1.1",
     "isomorphic-fetch": "2.2.1",
@@ -93,7 +91,6 @@
     "redux": "^3.0.0",
     "redux-saga": "0.10.4",
     "sanitize.css": "3.3.0",
-    "shed": "1.0.0",
     "shed-css": "0.4.3",
     "style-loader": "^0.12.3",
     "stylelint": "^6.0.0",
@@ -101,7 +98,6 @@
     "suitcss-components-grid": "3.0.3",
     "suitcss-utils-size": "1.1.0",
     "webfontloader": "1.6.24",
-    "webpack": "^1.12.1",
-    "whatwg-fetch": "^0.11.0"
+    "webpack": "^1.12.1"
   }
 }
