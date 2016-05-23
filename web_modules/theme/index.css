@@ -1,0 +1,94 @@
+:root {
+  --djs-black: #323430;
+  --djs-yellow: #F1DD40;
+  --djs-yellow-l: color(var(--djs-yellow) alpha(25%));
+  --djs-white: color(#FFFDE7 tint(25%));
+  --djs-f-f-sans: "source-sans-pro", sans-serif;
+  --djs-f-f-serif: "brim-narrow", Georgia, serif;
+
+}
+
+@each $mq in var(--mqs) {
+  @each $color in black, yellow, yellow-l, white {
+    @if $(mq) == n {
+      .bg\:$(color) {
+        background-color: var(--djs-$(color));
+      }
+
+      .c\:$(color) {
+        color: var(--djs-$(color));
+      }
+
+      @for $i from 0 to 90 by 25 {
+        .bg\:$(color)\.$i {
+          background-color: color(var(--djs-$(color)) alpha($i%));
+        }
+
+        .c\:$(color)\.$i {
+          color: color(var(--djs-$(color)) alpha($i%));
+        }
+      }
+
+      @for $i from 0 to 90 by 33 {
+        .bg\:$(color)\.$i {
+          background-color: color(var(--djs-$(color)) alpha($i%));
+        }
+
+        .c\:$(color)\.$i {
+          color: color(var(--djs-$(color)) alpha($i%));
+        }
+      }
+
+      @for $i from 0 to 90 by 10 {
+        .bg\:$(color)\.$i {
+          background-color: color(var(--djs-$(color)) alpha($i%));
+        }
+
+        .c\:$(color)\.$i {
+          color: color(var(--djs-$(color)) alpha($i%));
+        }
+      }
+
+    } @else {
+      @media(--mq-$(mq)) {
+        .bg\:$(color)\@$(mq) {
+          background-color: var(--djs-$(color));
+        }
+
+        .c\:$(color)\@$(mq) {
+          color: var(--djs-$(color));
+        }
+
+        @for $i from 0 to 90 by 5 {
+          .bg\:$(color)\.$i\@$(mq) {
+            background-color: color(var(--djs-$(color)) alpha($i%));
+          }
+
+          .c\:$(color)\.$i\@$(mq) {
+            color: color(var(--djs-$(color)) alpha($i%));
+          }
+        }
+
+      @for $i from 0 to 90 by 33 {
+          .bg\:$(color)\.$i\@$(mq) {
+            background-color: color(var(--djs-$(color)) alpha($i%));
+          }
+
+          .c\:$(color)\.$i\@$(mq) {
+            color: color(var(--djs-$(color)) alpha($i%));
+          }
+        }
+
+        @for $i from 0 to 90 by 10 {
+          .bg\:$(color)\.$i\@$(mq) {
+            background-color: color(var(--djs-$(color)) alpha($i%));
+          }
+
+          .c\:$(color)\.$i\@$(mq) {
+            color: color(var(--djs-$(color)) alpha($i%));
+          }
+        }
+      }
+    }
+  }
+}

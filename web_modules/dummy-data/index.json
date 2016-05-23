@@ -1,0 +1,52 @@
+[{
+  "id": 1,
+  "url": "http://www.meetup.com/Detroit-Javascript/",
+  "loadedUrl": "http://www.meetup.com/Detroit-Javascript/",
+  "requestedAt": "2016-05-21T22:13:29.357Z",
+  "loadingStartedAt": "2016-05-21T22:13:29.371Z",
+  "loadingFinishedAt": "2016-05-21T22:13:29.853Z",
+  "loadErrorCode": null,
+  "pageFunctionStartedAt": "2016-05-21T22:13:31.394Z",
+  "pageFunctionFinishedAt": "2016-05-21T22:13:31.397Z",
+  "uniqueKey": "http://www.meetup.com/Detroit-Javascript/",
+  "type": "StartUrl",
+  "isMainFrame": true,
+  "postData": "",
+  "contentType": "",
+  "method": "GET",
+  "willLoad": true,
+  "label": "events",
+  "referrerId": null,
+  "depth": 0,
+  "errorInfo": "",
+  "pageFunctionResult": [
+    {
+      "title": "Inaugural Detroit JavaScript Meetup",
+      "location": {
+        "name": "CDK Global",
+        "address": "500 Woodward Ave, Detroit, MI"
+      },
+      "description": "The time has come for the first Detroit Javascript meetup!\nThe first meetup will be a kickoff with people discussing what they want out of the group, and how the meetup...",
+      "datetime": "2016-05-25T19:00:00-04:00",
+      "event_url": "http://www.meetup.com/Detroit-Javascript/events/230198518/",
+      "attendees_count": "54",
+      "features": []
+    },
+    {
+      "title": "2nd Detroit JS Meetup with lightning talks",
+      "location": {
+        "name": false,
+        "address": false
+      },
+      "description": "2nd meetup! This time in Royal Oak at Ambassador! If you're interested in doing a lightning talk, please submit a pull request on our repo. https://github.com/DetroitJS/...",
+      "datetime": "2016-06-30T19:00:00-04:00",
+      "attendees_count": "1",
+      "features": [
+        "⚡️"
+      ]
+    }
+  ],
+  "interceptRequestData": null,
+  "downloadedBytes": 1093377,
+  "storageBytes": 1443
+}]

@@ -1,0 +1,145 @@
+/* GLOBAL STYLES, OMG ! */
+@import "css-modularscale";
+@import "suitcss-components-grid";
+@import "theme/index.css";
+@import "sanitize.css/lib/sanitize.css";
+@import "shed-css/lib/index.css";
+@custom-media --mq-xs (min-width: 40em);
+@custom-media --mq-sm (min-width: 48em);
+@custom-media --mq-md (min-width: 55em);
+@custom-media --mq-lg (min-width: 70em);
+@custom-media --mq-xl (min-width: 87em);
+
+:root {
+  --ms-base: 1rem;
+  --ms-ratio: var(--fourth);
+
+  --l-h--tight: 1.2;
+  --l-h--normal: 1.728;
+  --l-h--loose: 2.488;
+
+  --l-s-default: normal;
+  --l-s-tight: 0.08em;
+  --l-s-normal: 0.16em;
+  --l-s-loose: 0.32em;
+
+  --root-line-height: var(--l-h--normal);
+  --root-color: var(--djs-black);
+
+  --f-f-sans: var(--djs-f-f-sans);
+  --f-f-serif: var(--djs-f-f-serif);
+  --f-f-mono: monospace;
+}
+
+.\🐛 {
+  background: white;
+
+  @media (--mq-xs) {
+    background: cyan;
+  }
+
+  @media (--mq-sm) {
+    background: magenta;
+  }
+
+  @media (--mq-md) {
+    background: yellow;
+  }
+
+  @media (--mq-lg) {
+    background: gray;
+  }
+
+  @media (--mq-xl) {
+    background: lime;
+  }
+
+}
+
+body,
+html,
+#phenomic {
+  min-height: 100%;
+}
+
+a:any-link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+[data-reactroot] {
+  font-size: responsive;
+  min-font-size: var(--z1);
+  max-font-size: var(--z2);
+  lower-font-range: 48em;
+  upper-font-range: 70em;
+}
+
+.m-w\:md {
+  max-width: 33em;
+}
+
+.t-t\:u {
+  text-transform: uppercase;
+}
+
+.w-s\:n {
+  white-space: nowrap;
+}
+
+.b-b\:yellow {
+  border-bottom: 1px solid var(--djs-yellow);
+}
+
+.b-r\:yellow\.25 {
+  border-right: 1px solid color(var(--djs-yellow) alpha(25%));
+}
+
+.b-y\:yellow\.25 {
+  border-top: 1px solid color(var(--djs-yellow) alpha(25%));
+  border-bottom: 1px solid color(var(--djs-yellow) alpha(25%));
+}
+
+.b-y\:\.5 {
+  border-top-width: 0.25rem;
+  border-bottom-width: 0.25rem;
+}
+
+.b-r\:\.5 {
+  border-right-width: 0.25rem;
+}
+
+[class*=w\:] {
+  flex-basis: auto;
+}
+
+ol > li,
+ul > li {
+  margin: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+.Content {
+  @nest & a {
+    cursor: pointer;
+  }
+
+  @nest & h2 {
+    font-size: var(--z2);
+    margin-bottom: var(--z1);
+    margin-top: var(--z6);
+  }
+
+  @nest & p {
+    margin-bottom: var(--z2);
+    font-style: italic;
+  }
+}
+
+.t-t\:c {
+  text-transform: capitalize;
+}
