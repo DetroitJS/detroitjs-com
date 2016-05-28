@@ -23,7 +23,7 @@ export default class Footer extends Component {
             <div className="d:f">
               { pkg.meetup &&
                 <a
-                  href={ `//meetup.com/${pkg.meetup}` }
+                  href={ `https://meetup.com/${pkg.meetup}` }
                   className="d:i-b p-x:.8 p-y:1"
                 >
                   <Svg svg={ meetupSvg } />
