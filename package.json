@@ -4,7 +4,7 @@
   "homepage": "http://detroitjs.com",
   "twitter": "detroit_js",
   "meetup": "detroit-javascript",
-  "repository": "https://github.com/DetroitJS/DetroitJS-com",
+  "repository": "//github.com/DetroitJS/DetroitJS-com",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint:css": "stylelint \"web_modules/**/*.css\"",
