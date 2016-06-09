@@ -31,7 +31,7 @@ export default class Footer extends Component {
               }
               { pkg.twitter &&
                 <a
-                  href={ `https://twitter.com/${pkg.twitter}` }
+                  href={ `//twitter.com/${pkg.twitter}` }
                   className="d:i-b p-x:.8 p-y:1"
                 >
                   <Svg
