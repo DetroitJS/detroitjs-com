@@ -91,7 +91,7 @@
     "redux": "^3.0.0",
     "redux-saga": "0.10.4",
     "sanitize.css": "3.3.0",
-    "shed-css": "0.4.3",
+    "shed-css": "1.0.0-rc.7",
     "style-loader": "^0.12.3",
     "stylelint": "^6.0.0",
     "stylelint-config-standard": "^7.0.0",

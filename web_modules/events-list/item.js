@@ -80,14 +80,13 @@ const EventItem = (props) => {
               </span>
             </a>
           : null }
-          <ul className="p-x:.3 o:h">
-            { features.map(f =>
-              <li key={ f } className="fl:r p-x:.3">{ f }</li>
-            ) }
-            <li className="fl:r p-x:.3">🍏</li>
-            <li className="fl:r p-x:.3">🍏</li>
-            <li className="fl:r p-x:.3">🍏</li>
-          </ul>
+          { features &&
+            <ul className="p-x:.3 o:h">
+              { features.map(f =>
+                <li key={ f } className="fl:r p-x:.3">{ f }</li>
+              ) }
+            </ul>
+          }
         </div>
       </div>
     </div>

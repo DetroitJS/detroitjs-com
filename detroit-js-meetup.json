@@ -6,7 +6,7 @@
       "value": "http://www.meetup.com/Detroit-Javascript/"
     }
   ],
-  "clickableElementsSelector": "",
+  "clickableElementsSelector": ".event-list .event-desc a[href^=\"http://www.meetup.com/Detroit-Javascript/events/\"]",
   "crawlPurls": [],
   "considerUrlFragment": false,
   "maxCrawlDepth": null,
@@ -15,7 +15,7 @@
   "maxOutputPages": null,
   "maxParallelRequests": 1,
   "maxPageRetryCount": null,
-  "loadImages": true,
+  "loadImages": false,
   "loadCss": false,
   "ignoreRobotsTxt": false,
   "customHttpHeaders": [],
@@ -28,8 +28,8 @@
   "skipLoadingFrames": true,
   "saveCookies": false,
   "injectClientScripts": null,
-  "pageFunction": "function pageFunction(context) {\n    // called on every page the crawler visits, use it to extract data from it\n    var $ = context.jQuery;\n    var events = [];\n    $('.event-list').find('.event-item').each(function(i) {\n        var that = this;\n        var evtDesc = $(that).find('.event-desc').text().replace(/Learn more/, '').trim();\n        events.push({\n            title: $(this).find('[itemprop=summary]').text().trim(),\n            location: {\n                name: $(this).find('.event-venuename > a').text().trim() || false,\n                address: $(this).find('.event-where > dd').text().toLowerCase().trim() === 'join us!' ? false : $(this).find('.event-where > dd').text().replace(/\\(map\\)/, '').trim(),\n                // $(this).find('.event-where > dd').text().toLowerCase().trim() === 'join us!' ? false : $(this).find('.event-where > dd > a').attr('href'),\n                map_url: $(this).find('.event-where > dd').text().toLowerCase().trim() === 'join us!' ? false : $(this).find('.event-where > dd').text().toLowerCase().trim() === 'join us!' ? false : $(this).find('.event-where > dd > a').attr('href'),\n            },\n            description: evtDesc,\n            datetime: $(this).find('[itemprop=startDate]').attr('datetime'),\n            event_url: $(this).find('.rsvp-callout-rsvp').attr('href'),\n            attendees_count: parseInt($(this).find('.rsvpCount > a > em').text().trim()),\n            features: (function() {\n                var cateringItems = /(catering|🍏|🍎|🍐|🍊|🍋|🍌|🍉|🍇|🍓|🍈|🍒|🍑|🍍|🍅|🍆|🌶|🌽|🍠|🍯|🍞|🧀|🍗|🍖|🍤|🍳|🍔|🍟|🌭|🍕|🍝|🌮|🌯|🍜|🍲|🍥|🍣|🍱|🍛|🍙|🍚|🍘|🍢|🍡|🍧|🍨|🍦|🍰|🎂|🍮|🍬|🍭|🍫|🍿|🍩|🍪)/;\n                var cateringResult = cateringItems.exec(evtDesc);\n                var features = [];\n                if (/(lightning|⚡️)/.exec(evtDesc)) {\n                    features.push('⚡️');\n                }\n                if (cateringResult) {\n                    features.push(cateringResult[0])\n                }\n                return features;\n            })()\n        });\n    });\n    \n    var results = events;\n\n    return results;\n}",
-  "interceptRequest": "function interceptRequest(context, newRequest) {\n    // called whenever the crawler finds a link to a new page,\n    // use it to override default behavior\n    return newRequest;\n}",
+  "pageFunction": "function pageFunction(context) {\n    // called on every page the crawler visits, use it to extract data from it\n    var $ = context.jQuery;\n    var events = [];\n    function hasLightning(str) {\n        return /(lightning|⚡️)/i.exec(str);\n    }\n    if(context.request.url && /\\/events\\/\\d{9}/.exec(context.request.url)) {\n        $('#eventdets').each(function(i) {\n            var that = this;\n            var evtTitle = $(this).find('#event-title').text().trim();\n            var evtDesc = $(that).find('[itemprop=description]').text().trim();\n            var evtSummary = $(that).find('[itemprop=description]').first('p').text().trim();\n            events.push({\n                title: evtTitle,\n                location: {\n                    name: $(this).find('[itemprop=location] [itemprop=name]').text().trim() || false,\n                    address: $(this).find('[itemprop=location] [itemprop=\"address\"]').text().toLowerCase().trim().replace(/\\(map\\)/, '').trim(),\n                    map_url: $(this).find('[itemprop=location] [itemprop=name] > a').attr('href') || false,\n                },\n                datetime: $(this).find('[itemprop=startDate]').attr('datetime'),\n                event_url: context.request.url,\n                attendees_count: parseInt($(this).find('.rsvp-count-going').text().trim()),\n                features: (function() {\n                    var cateringItems = /(catering|🍏|🍎|🍐|🍊|🍋|🍌|🍉|🍇|🍓|🍈|🍒|🍑|🍍|🍅|🍆|🌶|🌽|🍠|🍯|🍞|🧀|🍗|🍖|🍤|🍳|🍔|🍟|🌭|🍕|🍝|🌮|🌯|🍜|🍲|🍥|🍣|🍱|🍛|🍙|🍚|🍘|🍢|🍡|🍧|🍨|🍦|🍰|🎂|🍮|🍬|🍭|🍫|🍿|🍩|🍪)/;\n                    var cateringResult = cateringItems.exec(evtDesc);\n                    var features = [];\n                    if (hasLightning(evtDesc) || hasLightning(evtTitle)) {\n                        features.push('⚡️');\n                    }\n                    if (cateringResult) {\n                        features.push(cateringResult[0])\n                    }\n                    return features;\n                })()\n            });\n        });\n\n    }\n    \n    var results = events || [];\n\n    return results;\n}",
+  "interceptRequest": "function interceptRequest(context, newRequest) {\n    // called whenever the crawler finds a link to a new page,\n    // use it to override default behavior\n    newRequest.willLoad = true;\n    return newRequest;\n}",
   "customData": "",
   "customId": "detroit-js-meetup",
   "comments": "for feeding events to detroit-js.com",
@@ -40,5 +40,8 @@
   "isDefaultDemoAct": null,
   "finishWebhookUrl": "",
   "createdAt": "2016-05-21T20:07:57.824Z",
-  "modifiedAt": "2016-05-22T22:32:50.150Z"
+  "modifiedAt": "2016-07-08T15:51:00.527Z",
+  "lastCookies": [],
+  "cookiesPersistence": "PER_PROCESS",
+  "pageFunctionTimeout": null
 }

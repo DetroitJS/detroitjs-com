@@ -73,7 +73,7 @@ function* waitForResults({ payload }) {
       const events = yield call(API.getEvents, payload.resultsUrl)
       yield put({
         type: FETCH_SUCCEEDED,
-        payload: events[0].pageFunctionResult,
+        payload: events.filter(r => r.pageFunctionResult),
       })
     }
   }
@@ -111,10 +111,10 @@ export function eventsReducer(state = [], { type, payload }) {
   case FETCH_SUCCEEDED:
     return [
       ...state,
-      ...payload,
+      ...payload.filter(ev => ev.pageFunctionResult.length)
+        .map(ev => ev.pageFunctionResult[0]),
     ]
   default:
     return state
   }
-
 }

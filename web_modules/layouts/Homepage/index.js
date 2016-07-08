@@ -16,14 +16,6 @@ class Homepage extends Component {
     this.props.getEvents()
   }
 
-  /*
-   * getEventsList = data => (
-   *   <ol>
-   *     { data.map(item => <li key={ item.text }>{ item.text }</li>) }
-   *   </ol>
-   * )
-   */
-
   render() {
     /*
      * const latestPosts = enhanceCollection(this.context.collection, {
@@ -35,9 +27,7 @@ class Homepage extends Component {
      */
 
     return (
-      <Home
-        { ...this.props}
-      >
+      <Home { ...this.props}>
           <div className="m-b:1">
             <EventsList data={ this.props.events } />
           </div>
