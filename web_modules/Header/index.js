@@ -6,7 +6,7 @@ import {
 } from "theme"
 
 export default class Header extends Component {
-  
+
   static contextTypes = {
     metadata: PropTypes.object.isRequired,
   };
@@ -28,6 +28,7 @@ export default class Header extends Component {
               w:full
               m-w:md
               m-x:a
+              m-y:0
               p-x:1
             "
           >

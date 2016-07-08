@@ -5,7 +5,6 @@
   --djs-white: color(#FFFDE7 tint(25%));
   --djs-f-f-sans: "source-sans-pro", sans-serif;
   --djs-f-f-serif: "brim-narrow", Georgia, serif;
-
 }
 
 @each $mq in var(--mqs) {

@@ -2,7 +2,7 @@
 @import "css-modularscale";
 @import "suitcss-components-grid";
 @import "theme/index.css";
-@import "sanitize.css/lib/sanitize.css";
+@import "sanitize.css";
 @import "shed-css/lib/index.css";
 @custom-media --mq-xs (min-width: 40em);
 @custom-media --mq-sm (min-width: 48em);
@@ -60,6 +60,7 @@ body,
 html,
 #phenomic {
   min-height: 100%;
+  background-color: var(--djs-yellow-l);
 }
 
 a:any-link {
@@ -138,8 +139,4 @@ ul {
     margin-bottom: var(--z2);
     font-style: italic;
   }
-}
-
-.t-t\:c {
-  text-transform: capitalize;
 }
