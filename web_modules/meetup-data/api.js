@@ -1,4 +1,5 @@
 import fetch from "isomorphic-fetch"
+
 const API_URL = "https://api.apifier.com/v1/m4naX6Mc7nWq8FasZ/crawlers/detroit-js-meetup/execute?token=EdpPeo99hPNpFTmQCEzviAC8u" // eslint-disable-line
 
 const API = {

@@ -2,11 +2,11 @@ import React, { Component, PropTypes } from "react"
 import "babel-polyfill"
 import Helmet from "react-helmet"
 import Webfont from "webfontloader"
-import "./index.css"
+import WordHR from "word-hr"
 
+import "./index.css"
 import Header from "../Header"
 import Footer from "../Footer"
-import WordHR from "word-hr"
 
 const FONT_CONFIG = {
   typekit: {

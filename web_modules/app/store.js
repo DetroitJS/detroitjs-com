@@ -1,9 +1,10 @@
 import { applyMiddleware, combineReducers } from "redux"
 import createStore from "phenomic/lib/redux/createStore"
 import createSagaMiddleware from "redux-saga"
-import * as phenomicReducers from "phenomic/lib/redux/modules"
-import { eventsReducer as events } from "meetup-data"
-import rootSaga from "meetup-data"
+import * as phenomicReducers from "phenomic/lib/redux/modules" // eslint-disable-line
+import rootSaga, {
+  eventsReducer as events,
+} from "meetup-data"
 
 const sagaMiddlware = createSagaMiddleware()
 
@@ -32,6 +33,7 @@ if (module.hot) {
       ...require("phenomic/lib/redux/modules"),
       ...require("meetup-data").eventsReducer,
     })
+
     store.replaceReducer(updatedReducer)
   })
 }

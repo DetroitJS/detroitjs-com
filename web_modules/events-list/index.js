@@ -1,4 +1,5 @@
 import React, { PropTypes } from "react"
+
 import Item from "./item"
 
 const EventsList = ({ data }) => {

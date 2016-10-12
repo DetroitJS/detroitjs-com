@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from "react"
 import Helmet from "react-helmet"
 import invariant from "invariant"
-import { joinUri } from "phenomic"
-import { BodyContainer } from "phenomic"
+import { joinUri, BodyContainer } from "phenomic"
 
 class Page extends Component {
   render() {
@@ -73,7 +72,7 @@ class Page extends Component {
           body &&
           <div className="Content p-x:.8 m-w:md m-x:a">
             <BodyContainer>
-                { body }
+              { body }
             </BodyContainer>
           </div>
         }

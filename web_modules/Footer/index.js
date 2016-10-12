@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from "react"
+import Svg from "react-svg-inline"
+import { Link } from "react-router"
+
 import twitterSvg from "../icons/iconmonstr-twitter-1.svg"
 import gitHubSvg from "../icons/iconmonstr-github-1.svg"
 import meetupSvg from "../icons/meetup.svg"
-import Svg from "react-svg-inline"
-import { Link } from "react-router"
 
 export default class Footer extends Component {
 
