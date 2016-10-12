@@ -17,6 +17,7 @@ export default class Header extends Component {
         className="bg:yellow-l"
       >
         <Link
+          className="d:b"
           to="/"
         >
           <h1

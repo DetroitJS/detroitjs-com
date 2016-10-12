@@ -28,7 +28,7 @@ class Homepage extends Component {
 
     return (
       <Home { ...this.props }>
-          <div className="m-b:1">
+          <div className="">
             <EventsList data={ this.props.events } />
           </div>
       </Home>

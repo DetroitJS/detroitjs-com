@@ -4,6 +4,7 @@
 @import "theme/index.css";
 @import "sanitize.css";
 @import "shed-css/lib/index.css";
+
 @custom-media --mq-xs (min-width: 40em);
 @custom-media --mq-sm (min-width: 48em);
 @custom-media --mq-md (min-width: 55em);
@@ -13,19 +14,15 @@
 :root {
   --ms-base: 1rem;
   --ms-ratio: var(--fourth);
-
   --l-h--tight: 1.2;
   --l-h--normal: 1.728;
   --l-h--loose: 2.488;
-
   --l-s-default: normal;
   --l-s-tight: 0.08em;
   --l-s-normal: 0.16em;
   --l-s-loose: 0.32em;
-
   --root-line-height: var(--l-h--normal);
   --root-color: var(--djs-black);
-
   --f-f-sans: var(--djs-f-f-sans);
   --f-f-serif: var(--djs-f-f-serif);
   --f-f-mono: monospace;
@@ -53,7 +50,6 @@
   @media (--mq-xl) {
     background: lime;
   }
-
 }
 
 body,
@@ -122,6 +118,9 @@ ul > li {
 ol,
 ul {
   list-style-type: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .Content {

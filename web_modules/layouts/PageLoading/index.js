@@ -16,7 +16,7 @@ export default class PageLoading extends Component {
       <div>
         <TopBarProgressIndicator />
         <div>
-          <div></div>
+          <div />
         </div>
       </div>
     )

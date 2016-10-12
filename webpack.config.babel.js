@@ -4,6 +4,7 @@ import webpack from "webpack"
 import ExtractTextPlugin from "extract-text-webpack-plugin"
 
 import pkg from "./package.json"
+import { phenomicLoader } from "phenomic"
 
 // note that this webpack file is exporting a "makeConfig" function
 // which is used for phenomic to build dynamic configuration based on your needs
@@ -20,7 +21,7 @@ export const makeConfig = (config = {}) => {
         {
           // phenomic requirement
           test: /\.md$/,
-          loader: "phenomic/lib/content-loader",
+          loader: phenomicLoader,
           // config is in phenomic.contentLoader section below
           // so you can use functions (and not just JSON) due to a restriction
           // of webpack that serialize/deserialize loader `query` option.
@@ -64,21 +65,19 @@ export const makeConfig = (config = {}) => {
     },
 
     phenomic: {
-      contentLoader: {
-        context: path.join(__dirname, config.source),
-        // renderer: (text) => html
-        feedsOptions: {
-          title: pkg.name,
-          site_url: pkg.homepage,
-        },
-        feeds: {
-          "feed.xml": {
-            collectionOptions: {
-              filter: { layout: "Post" },
-              sort: "date",
-              reverse: true,
-              limit: 20,
-            },
+      context: path.join(__dirname, config.source),
+      // renderer: (text) => html
+      feedsOptions: {
+        title: pkg.name,
+        site_url: pkg.homepage,
+      },
+      feeds: {
+        "feed.xml": {
+          collectionOptions: {
+            filter: { layout: "Post" },
+            sort: "date",
+            reverse: true,
+            limit: 20,
           },
         },
       },
