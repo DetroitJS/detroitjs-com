@@ -80,7 +80,6 @@ function* waitForResults({ payload }) {
     console.error(e)
     yield put({ type: FETCH_FAILED, message: e.message })
   }
-  console.groupEnd()
 }
 
 /*

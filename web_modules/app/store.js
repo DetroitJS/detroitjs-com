@@ -1,9 +1,13 @@
-import { applyMiddleware, combineReducers } from "redux"
+import {
+  applyMiddleware,
+  combineReducers,
+} from "redux"
+import { composeWithDevTools } from "redux-devtools-extension"
 import createStore from "phenomic/lib/redux/createStore"
 import createSagaMiddleware from "redux-saga"
 import * as phenomicReducers from "phenomic/lib/redux/modules" // eslint-disable-line
 import rootSaga, {
-  eventsReducer as events,
+  eventsReducer,
 } from "meetup-data"
 
 const sagaMiddlware = createSagaMiddleware()
@@ -11,9 +15,11 @@ const sagaMiddlware = createSagaMiddleware()
 const store = createStore(
   combineReducers({
     ...phenomicReducers,
-    events,
+    events: eventsReducer,
   }),
-  applyMiddleware(sagaMiddlware),
+  composeWithDevTools(
+    applyMiddleware(sagaMiddlware),
+  ),
   { ...(typeof window !== "undefined") && window.__INITIAL_STATE__ },
 )
 

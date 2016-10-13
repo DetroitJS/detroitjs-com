@@ -40,7 +40,8 @@
       "react/prefer-stateless-function": 0,
       "react/jsx-no-literals": 0,
       "import/no-extraneous-dependencies": 0,
-      "import/no-unresolved": 0
+      "import/no-unresolved": 0,
+      "import/max-dependencies": 0
     }
   },
   "eslintConfigRuleReact/prefer-stateless-function": "https://github.com/MoOx/phenomic/issues/46",
@@ -97,19 +98,21 @@
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-helmet": "^3.0.0",
-    "react-redux": "^4.0.0",
+    "react-redux": "4.4.5",
     "react-router": "2.8.1",
     "react-svg-inline": "1.2.0",
     "react-topbar-progress-indicator": "^1.0.0",
-    "redux": "^3.0.0",
+    "redux": "3.6.0",
+    "redux-devtools-extension": "1.0.0",
     "redux-saga": "0.12.0",
     "sanitize.css": "4.1.0",
-    "shed-css": "1.0.0-rc.8",
+    "shed-css": "1.0.0-rc.9",
     "style-loader": "0.13.1",
     "stylelint": "7.4.2",
     "stylelint-config-standard": "13.0.2",
     "suitcss-components-grid": "3.0.3",
     "suitcss-utils-size": "2.0.0",
+    "svgo-loader": "1.1.0",
     "webfontloader": "1.6.26",
     "webpack": "1.13.2"
   }
