@@ -1,0 +1,27 @@
+$link: hsl(0, 0%, 21%);
+
+@import '../../node_modules/bulma/bulma.sass';
+
+$link: $grey-dark;
+
+hr {
+    background-color: $black;
+    height: 2px;
+}
+
+.content {
+  a {
+    text-decoration: underline;
+  }
+
+  img {
+    @include mobile {
+      max-width: 50%;
+    }
+
+    @include tablet {
+      max-width: 25%;
+    }
+  }
+}
+
