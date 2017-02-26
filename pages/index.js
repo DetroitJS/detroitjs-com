@@ -1,14 +1,26 @@
-import React, {createClass} from 'react'
-import Layout from '../components/layouts/master'
-import Meetups from '../components/meetups'
+import React from 'react';
+import Shed from 'react-shed';
+import Layout from 'components/layouts/master';
+import Meetups from 'components/meetups';
 
 export default () => (
-<Layout>
-    <div className="section" style={{background: '#f7df1e'}}>
-        <h2 className="title is-2 has-text-centered">Upcoming Meetups</h2>
-        <div className="container">
-            <Meetups />
-        </div>
-    </div>
-</Layout>
-)
+  <Layout>
+    <div.shed
+      bg="yellow"
+      py="2"
+      px="1"
+    >
+      <h2.shed
+        c="black"
+        f="3"
+        mb="2"
+        ta="c"
+      >
+        Upcoming Meetups
+      </h2.shed>
+      <div.shed>
+        <Meetups />
+      </div.shed>
+    </div.shed>
+  </Layout>
+);

@@ -1,0 +1,21 @@
+{
+  "presets": [
+    "next/babel",
+    "stage-0"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "components": "components/",
+        "pages": "pages/"
+      }
+    }],
+    ["wrap-in-js", {
+      "extensions": ["css$"]
+    }],
+    "transform-flow-strip-types",
+    "shed"
+  ],
+  "ignore": []
+}

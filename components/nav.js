@@ -1,25 +1,33 @@
-import Link from 'next/link'
+import React from 'react';
+import Shed from 'react-shed';
+import Link from 'next/link';
 
 export default () => (
-<nav className="nav ">
-  <div className="nav-center">
-    <Link href="/">
-      <a className="nav-item">
-        Home
+  <nav>
+    <div.shed
+      d="f"
+      jc="c"
+    >
+      <Link href="/">
+        <a.shed
+          c="gray"
+          p=".9"
+        >
+          Home
+        </a.shed>
+      </Link>
+      <a className="nav-item" href="https://meetup.com/detroit-javascript">
+        Meetup
       </a>
-    </Link>
-    <a className="nav-item" href="https://meetup.com/detroit-javascript">
-      Meetup
-    </a>
-    <a className="nav-item" href="https://gitter.im/detroitjs/lobby">
-      Chat
-    </a>
-    <a className="nav-item" href="https://github.com/detroitjs">
-      Github
-    </a>
-    <a className="nav-item" href="https://twitter.com/detroit_js">
-      Twitter
-    </a>
-  </div>
-</nav>
-)
+      <a className="nav-item" href="https://gitter.im/detroitjs/lobby">
+        Chat
+      </a>
+      <a className="nav-item" href="https://github.com/detroitjs">
+        Github
+      </a>
+      <a className="nav-item" href="https://twitter.com/detroit_js">
+        Twitter
+      </a>
+    </div.shed>
+  </nav>
+);

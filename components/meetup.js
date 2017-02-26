@@ -1,8 +1,14 @@
-export default (props) => (
-        <div className="content">
-            <h3 className="title is-3">{props.title}</h3>
-            <span dangerouslySetInnerHTML={{__html:props.description}}>
-            </span>
-        </div>
-)
+import React from 'react';
+import Shed from 'react-shed';
 
+export default props => (
+  <div>
+    <h3.shed
+      f="2"
+      mb="1"
+    >
+      {props.title}
+    </h3.shed>
+    <span dangerouslySetInnerHTML={{ __html: props.description }} />
+  </div>
+);

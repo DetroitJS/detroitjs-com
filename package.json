@@ -5,20 +5,65 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.15.3",
-    "bulma": "^0.3.1",
-    "next": "latest",
-    "node-sass": "^4.3.0"
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "babel-plugin-shed": "^1.0.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-wrap-in-js": "^1.1.1",
+    "babel-preset-stage-0": "^6.22.0",
+    "color": "^1.0.3",
+    "modularscale": "^1.0.2",
+    "next": "2.0.0-beta.32",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-shed": "^1.7.0",
+    "styled-components": "^1.4.3"
   },
   "scripts": {
-    "dev": "concurrently --kill-others \"npm run dev:sass\" \"npm run dev:next\"",
-    "dev:sass": "node-sass -w ./assets/sass/app.scss ./static/app.css",
+    "dev": "npm run dev:next",
     "dev:next": "./node_modules/.bin/next",
-    "build:sass": "node-sass ./assets/sass/app.scss ./static/app.css",
     "build:next": "./node_modules/.bin/next build",
     "build": "npm run build:sass && npm run build:next",
     "start": "./node_modules/.bin/next start"
   },
+  "eslintConfig": {
+    "env": {
+      "browser": true
+    },
+    "parser": "babel-eslint",
+    "extends": [
+      "airbnb"
+    ],
+    "rules": {
+      "react/no-unused-prop-types": 0,
+      "no-debugger": 1,
+      "no-mixed-operators": 0,
+      "no-confusing-arrow": 0,
+      "react/jsx-filename-extension": 0,
+      "import/extensions": 0,
+      "import/no-named-as-default-member": 0,
+      "import/no-named-as-default": 0,
+      "import/no-unresolved": 0,
+      "import/no-extraneous-dependencies": 0,
+      "import/no-absolute-path": 0,
+      "import/no-duplicates": 0,
+      "react/require-default-props": 0,
+      "react/prop-types": 0,
+      "react/jsx-no-undef": 0,
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "Shed"
+        }
+      ]
+    }
+  },
   "devDependencies": {
-    "concurrently": "^3.1.0"
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.0.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0"
   }
 }
