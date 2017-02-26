@@ -23,7 +23,7 @@
     "dev": "npm run dev:next",
     "dev:next": "./node_modules/.bin/next",
     "build:next": "./node_modules/.bin/next build",
-    "build": "npm run build:sass && npm run build:next",
+    "build": "npm run build:next",
     "start": "./node_modules/.bin/next start"
   },
   "eslintConfig": {
