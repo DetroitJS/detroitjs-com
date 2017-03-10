@@ -23,7 +23,7 @@ export default createClass({
     render() {
 
         return (
-            <div>
+            <div className="has-text-centered">
             {this.state.loading ? <img src="/static/loader.svg" /> : ''}
             {this.state.meetups.map((meetup, index) => (
               <div key={index}>
