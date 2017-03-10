@@ -21,12 +21,14 @@ export default createClass({
     },
 
     render() {
+
         return (
-            <div className="has-text-centered">
+            <div>
             {this.state.loading ? <img src="/static/loader.svg" /> : ''}
             {this.state.meetups.map((meetup, index) => (
               <div key={index}>
                 <Meetup
+                    date={meetup.time}
                     title={meetup.name}
                     description={meetup.description}
                 />
