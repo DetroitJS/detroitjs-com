@@ -1,0 +1,22 @@
+{
+  "name": "detroitjs.com",
+  "version": "1.0.0",
+  "description": "Detroit JS Website",
+  "main": "index.js",
+  "repository": "git@github.com:DetroitJS/detroitjs-com.git",
+  "author": "TJ <tj@tjmiller.co>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.16.0",
+    "moment": "^2.18.1",
+    "next": "^2.0.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "shortid": "^2.2.8"
+  }
+}
