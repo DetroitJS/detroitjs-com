@@ -1,5 +1,7 @@
 # DetroitJS Website
 
+Powered by [NextJS](https://github.com/zeit/next.js/)
+
 # Setup
 ## Development
 `npm i` or `yarn install`
