@@ -1,6 +1,6 @@
 # DetroitJS Website
 
-Powered by [NextJS](https://github.com/zeit/next.js/)
+Powered by [Nextjs](https://github.com/zeit/next.js) and [Tachyons](http://tachyons.io)
 
 # Setup
 ## Development
