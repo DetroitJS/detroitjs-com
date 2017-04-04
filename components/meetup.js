@@ -10,7 +10,7 @@ export default props => (
     <div className="bt bw2 b-solid" style={{borderColor: '#f7d71e'}}>
       <h2 className="f2 tc">{props.title}</h2>
       <h3 className="f3 tc">
-        {formattedTime(props.time)}
+        {formattedTime(props.date)}
       </h3>
       <div style={{background: '#f7df1e'}}>
         <div
