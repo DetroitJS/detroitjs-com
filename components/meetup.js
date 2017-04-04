@@ -1,6 +1,9 @@
 import moment from 'moment'
 
 const formattedTime = time => moment(time).format('MMMM Do YYYY @ h:mm a')
+const formatContent = content => ({
+  __html: content.replace(/src="http/gi, 'src="https')
+})
 
 export default props => (
   <article className="fl w-100 w-50-ns pa2 pa3-ns">
@@ -12,7 +15,7 @@ export default props => (
       <div style={{background: '#f7df1e'}}>
         <div
           className="center measure lh-copy pa3 meetup-content"
-          dangerouslySetInnerHTML={{__html:props.description}}
+          dangerouslySetInnerHTML={formatContent(props.description)}
         />
       </div>
       <a className="tc black ba b--black mt2 pa2 bg-white hover-bg-light-yellow db no-underline" href={props.url}>Event Details</a>
