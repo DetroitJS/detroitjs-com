@@ -8,7 +8,7 @@ export default ({children} = props) => (
       <title>Detroit.js</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
-      <style jsx global>{`
+      <style dangerouslySetInnerHtml={{__html:`
       @font-face {
         font-family: 'neutraface2Text-Bold';
         src: url('/static/fonts/Neutraface2Text-Bold.eot');
@@ -20,7 +20,7 @@ export default ({children} = props) => (
       .branding [class*="headline"] {
         font-family: 'neutraface2Text-Bold', sans-serif !important;
       }
-    `}</style>
+    `}}></style>
     </Head>
     <Header />
       {children}
