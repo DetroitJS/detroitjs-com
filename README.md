@@ -4,6 +4,11 @@ Powered by [Nextjs](https://github.com/zeit/next.js) and [Tachyons](http://tachy
 
 # Setup
 ## Development
+
+`git clone https://github.com/DetroitJS/detroitjs-com.git`
+
+`cd detroitjs-com`
+
 `npm i` or `yarn install`
 
 ## Production
