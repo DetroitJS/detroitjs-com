@@ -23,6 +23,7 @@
     "eslint": "^3.19.0",
     "eslint-loader": "^1.7.1",
     "eslint-config-standard": "^10.2.0",
+    "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.5.0",
