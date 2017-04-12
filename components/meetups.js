@@ -1,7 +1,9 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import Meetup from './meetup'
 import shortid from 'shortid'
 
-export default props => (
+const Meetups = props => (
   <div>
     {props.meetups.map((meetup, index) => (
       <Meetup
@@ -14,3 +16,11 @@ export default props => (
     ))}
   </div>
 )
+
+Meetups.propTypes = {
+  meetups: PropTypes.array
+}
+
+Meetups.displayName = 'Meetups'
+
+export default Meetups

@@ -1,7 +1,8 @@
+import React from 'react'
 import Link from 'next/link'
 import Nav from './nav'
 
-export default () => (
+const Header = () => (
   <header>
     <div className="branding">
       <Link href="/">
@@ -18,3 +19,7 @@ export default () => (
     `}</style>
   </header>
 )
+
+Header.displayName = 'Header'
+
+export default Header
