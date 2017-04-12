@@ -28,7 +28,7 @@ const CodeOfConduct = () => (
 
             <p>We expect participants to follow these rules at all DetroitJS meetups and DetroitJS-related social endeavors.</p>
 
-            <p>Organizers: <a href="https://twitter.com/seafoam6" style={{color: 'black'}}>Steve</a>, <a href="https://twitter.com/SIXLIV3" style={{color :'black'}}>TJ</a></p>
+            <p>Organizers: <a href="https://twitter.com/seafoam6" style={{color: 'black'}}>Steve</a>, <a href="https://twitter.com/SIXLIV3" style={{color: 'black'}}>TJ</a></p>
         </div>
     </div>
   </Layout>
