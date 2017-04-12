@@ -1,14 +1,16 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
 
-export default ({children} = props) => (
+const Layout = ({children}) => (
     <div>
     <Head>
       <title>Detroit.js</title>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
-      <style dangerouslySetInnerHtml={{__html:`
+      <style dangerouslySetInnerHtml={{__html: `
       @font-face {
         font-family: 'neutraface2Text-Bold';
         src: url('/static/fonts/Neutraface2Text-Bold.eot');
@@ -27,3 +29,11 @@ export default ({children} = props) => (
     <Footer />
     </div>
 )
+
+Layout.propTypes = {
+  children: PropTypes.element
+}
+
+Layout.displayName = 'Layout'
+
+export default Layout

@@ -1,6 +1,7 @@
+import React from 'react'
 import Link from 'next/link'
 
-export default () => (
+const Nav = () => (
   <nav className="bb bt b--black-20 tc center bg-white">
     <Link href="/">
       <a className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l">Home</a>
@@ -14,3 +15,7 @@ export default () => (
     </Link>
   </nav>
 )
+
+Nav.displayName = 'Nav'
+
+export default Nav

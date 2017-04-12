@@ -1,6 +1,7 @@
+import React from 'react'
 import Link from 'next/link'
 
-export default () => (
+const Footer = () => (
   <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
     <div className="tc mt3">
     <Link href="/">
@@ -22,3 +23,7 @@ export default () => (
   `}</style>
   </footer>
 )
+
+Footer.displayName = 'Footer'
+
+export default Footer

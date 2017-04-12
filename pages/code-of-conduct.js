@@ -1,5 +1,7 @@
+import React from 'react'
 import Layout from '../components/layout'
-export default () => (
+
+const CodeOfConduct = () => (
   <Layout>
     <div className="measure lh-copy center">
     <h1>Welcome to DetroitJS</h1>
@@ -25,7 +27,9 @@ export default () => (
 
     <p>We expect participants to follow these rules at all DetroitJS meetups and DetroitJS-related social endeavors.</p>
 
-    <p>Organizers: <a href="https://twitter.com/seafoam6" style={{color:'black'}}>Steve</a>, <a href="https://twitter.com/SIXLIV3" style={{color:'black'}}>TJ</a></p>
+    <p>Organizers: <a href="https://twitter.com/seafoam6" style={{color: 'black'}}>Steve</a>, <a href="https://twitter.com/SIXLIV3" style={{color: 'black'}}>TJ</a></p>
     </div>
   </Layout>
 )
+
+export default CodeOfConduct
