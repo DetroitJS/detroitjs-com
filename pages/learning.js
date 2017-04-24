@@ -6,33 +6,54 @@ const Learning = () => (
   <div className="ph3">
     <div className="measure lh-copy center">
       <h1>Learning JavaScript Resources</h1>
+        <h4 className="f6 fw6">Legend</h4>
+        <dl className="f6 lh-title mv2 mr2">
+          <dt className="dib b">📖 :</dt>
+          <dd className="dib ml0 gray">Book</dd>
+        </dl>
+        <dl className="f6 lh-title mv2 mr2">
+          <dt className="dib b">👾 :</dt>
+          <dd className="dib ml0 gray">Game</dd>
+        </dl>
+        <dl className="f6 lh-title mv2 mr2">
+          <dt className="dib b">☁️ :</dt>
+          <dd className="dib ml0 gray">Interactive tutorial (on the web)</dd>
+        </dl>
+      <dl className="f6 lh-title mv2 mr2">
+        <dt className="dib b">💻 :</dt>
+        <dd className="dib ml0 gray">Interactive tutorial (installation required)</dd>
+      </dl>
+      <dl className="f6 lh-title mv2 mr2">
+        <dt className="dib b">🥋 :</dt>
+        <dd className="dib ml0 gray">Code Katas (coding practice)</dd>
+      </dl>
       <h2 id="beginner">Beginner</h2>
       <li>
-        <a className="link mid-gray dim underline" href="https://www.codecademy.com/learn/learn-javascript">Codecademy - Learn JavaScript</a>
+        <a className="link mid-gray dim " href="https://www.codecademy.com/learn/learn-javascript">Codecademy</a> ☁️
       </li>
       <li>
-        <a className="link mid-gray dim underline" href="https://www.freecodecamp.com">Free Code Camp</a>
+        <a className="link mid-gray dim " href="https://www.freecodecamp.com">Free Code Camp</a> ☁️
       </li>
       <li>
-        <a className="link mid-gray dim underline" href="https://www.khanacademy.org/computing/computer-programming">Khan Academy - Computer Programming</a>
+        <a className="link mid-gray dim " href="https://www.khanacademy.org/computing/computer-programming">Khan Academy</a> ☁️
       </li>
       <li>
-        <a className="link mid-gray dim underline" href="http://jsforcats.com/">JavaScript for Cats (book)</a>
+        <a className="link mid-gray dim " href="http://jsforcats.com/">JavaScript for Cats</a> 📖
       </li>
       <li>
-        <a className="link mid-gray dim underline" href="http://eloquentjavascript.net/">Eloquent JavaScript (book)</a>
+        <a className="link mid-gray dim " href="http://eloquentjavascript.net/">Eloquent JavaScript</a> 📖
       </li>
       <li>
-        <a className="link mid-gray dim underline" href="https://codecombat.com/">Code Combat (coding game)</a>
+        <a className="link mid-gray dim " href="https://codecombat.com/">Code Combat</a> 👾
       </li>
       <li>
-        <a className="link mid-gray dim underline" href="https://nodeschool.io/">Node School - JavaScripting</a>
+        <a className="link mid-gray dim " href="https://nodeschool.io/">Node School</a> 💻
       </li>
       <li>
-        <a className="link mid-gray dim underline" href="https://www.codewars.com">Code Wars - JavaScript</a>
+        <a className="link mid-gray dim " href="https://www.codewars.com">Code Wars</a> 🥋
       </li>
       <li>
-        <a className="link mid-gray dim underline" href="http://exercism.io">exercism.io - Code Excercises (many languages)</a>
+        <a className="link mid-gray dim " href="http://exercism.io">exercism.io</a> 🥋
       </li>
     </div>
   </div>
