@@ -23,6 +23,16 @@ const Layout = ({children}) => (
         font-family: 'neutraface2Text-Bold', sans-serif !important;
       }
     `}}></style>
+    <style>{`
+      [data-reactroot] > * {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      [data-reactroot] > * > header + * {
+        flex: 1;
+      }
+    `}</style>
     </Head>
     <Header />
       {children}
