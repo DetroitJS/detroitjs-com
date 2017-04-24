@@ -55,6 +55,9 @@ const Learning = () => (
       <li>
         <a className="link mid-gray dim " href="http://exercism.io">exercism.io</a> 🥋
       </li>
+	  <li>
+        <a className="link mid-gray dim " href="http://cyber-dojo.org">cyber-dojo.org</a> 🥋
+      </li>
     </div>
   </div>
 </Layout>
