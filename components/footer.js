@@ -14,6 +14,9 @@ const Footer = () => (
     <Link href="/code-of-conduct">
         <a className="f6 dib ph2 link mid-gray dim">Code of Conduct</a>
     </Link>
+    <Link href="/learning">
+      <a className="f6 dib ph2 link mid-gray dim">Learn JavaScript</a>
+    </Link>
     </div>
     <style jsx>{`
       footer {

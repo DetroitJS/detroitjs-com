@@ -13,6 +13,9 @@ const Nav = () => (
     <Link href="/code-of-conduct">
       <a className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l">Code of Conduct</a>
     </Link>
+    <Link href="/learning">
+      <a className="f6 f5-l link bg-animate black-80 hover-bg-light-yellow dib pa3 ph4-l">Learn JavaScript</a>
+    </Link>
   </nav>
 )
 
