@@ -8,7 +8,14 @@ const Layout = ({children}) => (
     <div>
     <Head>
       <title>Detroit.js</title>
+      <meta name="description" content="Detroit.js is a community of JavaScript developers in Detroit with meetups held monthly." />
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/static/icons/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/static/icons/favicon-16x16.png" />
+      <link rel="manifest" href="/static/icons/manifest.json" />
+      <link rel="mask-icon" href="/static/icons/safari-pinned-tab.svg" color="#5bbad5" />
+      <meta name="theme-color" content="#ffffff" />
       <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
       <style dangerouslySetInnerHtml={{__html: `
       @font-face {
