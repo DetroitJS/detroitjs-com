@@ -1,4 +1,5 @@
 # DetroitJS Website
+[![Build Status](https://travis-ci.org/DetroitJS/detroitjs-com.svg?branch=master)](https://travis-ci.org/DetroitJS/detroitjs-com)
 
 Powered by [Nextjs](https://github.com/zeit/next.js) and [Tachyons](http://tachyons.io)
 
@@ -22,5 +23,5 @@ The container will install all dependencies using Yarn and will expose the runni
 ### Build Image 
 `docker build -t detroitjs/detroitjs.com .`
 
-### RUN
+### Run
 `docker run -d {host port}:3000 detroitjs/detroitjs.com`
