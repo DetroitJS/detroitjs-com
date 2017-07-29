@@ -13,21 +13,21 @@
     "test": "./node_modules/.bin/eslint components/*.js pages/*.js"
   },
   "dependencies": {
-    "axios": "^0.16.0",
+    "axios": "^0.16.2",
     "moment": "^2.18.1",
-    "next": "^2.0.1",
-    "prop-types": "^15.5.7",
-    "react": "^15.4.2",
+    "next": "^2.4.9",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
     "react-dom": "^15.4.2",
     "shortid": "^2.2.8"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-config-standard": "^10.2.0",
-    "eslint-plugin-react": "^6.10.3",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-node": "^4.2.2",
+    "eslint": "^4.3.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.5.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1"
   }
