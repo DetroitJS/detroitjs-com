@@ -1,5 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'next/link'
+import shortid from 'shortid'
 
 const navigationLinks = [
   { name: 'Home', link: '/', router: true },
@@ -22,18 +24,18 @@ const SimpleLink = ({ link }) => (
 )
 
 const RenderLink = link => link.router
-  ? (<NextLink link={link} />)
-  : (<SimpleLink link={link} />)
+  ? (<NextLink link={link} key={shortid.generate()} />)
+  : (<SimpleLink link={link} key={shortid.generate()} />)
 
 NextLink.propTypes = {
-  link: React.PropTypes.shape({
-    link: React.PropTypes.string.isRequired
+  link: PropTypes.shape({
+    link: PropTypes.string.isRequired
   })
 }
 
 SimpleLink.propTypes = {
-  link: React.PropTypes.shape({
-    link: React.PropTypes.string.isRequired
+  link: PropTypes.shape({
+    link: PropTypes.string.isRequired
   })
 }
 
