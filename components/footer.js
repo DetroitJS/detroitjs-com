@@ -1,22 +1,10 @@
 import React from 'react'
-import Link from 'next/link'
+import NavLink from './navLink.js'
 
 const Footer = () => (
   <footer className="pv4 ph3 ph5-m ph6-l mid-gray">
     <div className="tc mt3">
-      <Link href="/">
-        <a className="f6 dib ph2 link mid-gray dim">Home</a>
-      </Link>
-      <a className="f6 dib ph2 link mid-gray dim" href="https://www.meetup.com/Detroit-Javascript">Meetup</a>
-      <a className="f6 dib ph2 link mid-gray dim" href="https://gitter.im/Detroitjs/Lobby">Chat</a>
-      <a className="f6 dib ph2 link mid-gray dim" href="https://github.com/detroitjs">Github</a>
-      <a className="f6 dib ph2 link mid-gray dim" href="https://twitter.com/detroit_js">Twitter</a>
-      <Link href="/code-of-conduct">
-        <a className="f6 dib ph2 link mid-gray dim">Code of Conduct</a>
-      </Link>
-      <Link href="/learning">
-        <a className="f6 dib ph2 link mid-gray dim">Learn JavaScript</a>
-      </Link>
+      <NavLink />
     </div>
     <style jsx>{`
 footer {
