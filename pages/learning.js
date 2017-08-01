@@ -32,14 +32,14 @@ const learningLinks = [
 
 const LegendItem = ({ item }) => (
   <dl className="f6 lh-title mv2 mr2">
-    <dt className="dib b">{item.term} :</dt>
+    <dt className="dib b">{item.term} :&nbsp;</dt>
     <dd className="dib ml0 gray">{item.description}</dd>
   </dl>
 )
 
 const LearningLink = ({ link }) => (
   <li>
-    <a className="link mid-gray dim" href={link.link}>{link.symbol} {link.name}</a>
+    {link.symbol} <a className="link mid-gray dim" href={link.link}>{link.name}</a>
   </li>
 )
 
@@ -55,7 +55,7 @@ const Learning = () => (
         ))}
 
         <h2 id="beginner">Beginner</h2>
-        <ul>
+        <ul className="list pl0">
         {learningLinks.map((link) => (
           <LearningLink key={shortid.generate()} link={link} />
         ))}
