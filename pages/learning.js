@@ -27,7 +27,8 @@ const learningLinks = [
   { name: 'Node School', link: 'https://nodeschool.io/', symbol: TUTORIAL_INSTALL_REQUIRED },
   { name: 'Code Wars', link: 'https://www.codewars.com', symbol: CODE_KATA },
   { name: 'exercism.io', link: 'http://exercism.io', symbol: CODE_KATA },
-  { name: 'cyber-dojo.org', link: 'http://cyber-dojo.org', symbol: CODE_KATA }
+  { name: 'cyber-dojo.org', link: 'http://cyber-dojo.org', symbol: CODE_KATA },
+  { name: 'ES6 Katas', link: 'http://es6katas.org/', symbol: CODE_KATA }
 ]
 
 const LegendItem = ({ item }) => (
