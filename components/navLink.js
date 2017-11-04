@@ -6,7 +6,7 @@ import shortid from 'shortid'
 const navigationLinks = [
   { name: 'Home', link: '/', router: true },
   { name: 'Meetup', link: 'https://www.meetup.com/Detroit-Javascript' },
-  { name: 'Chat', link: 'https://detroitjs.slack.com/' },
+  { name: 'Chat', link: 'https://detroitjs-slack.now.sh' },
   { name: 'Github', link: 'https://github.com/detroitjs' },
   { name: 'Twitter', link: 'https://twitter.com/detroit_js' },
   { name: 'Code of Conduct', link: '/code-of-conduct', router: true },
