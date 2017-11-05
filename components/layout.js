@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
+import sass from '../styles/index.scss'
 
 const Layout = ({children}) => (
     <div>
@@ -40,6 +41,7 @@ const Layout = ({children}) => (
         flex: 1;
       }
     `}</style>
+        <style dangerouslySetInnerHTML={{ __html: sass }} />
     </Head>
     <Header />
       {children}
