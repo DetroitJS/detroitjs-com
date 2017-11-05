@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Nav from './nav'
-import sty from '../styles/index.scss'
 
 const Header = () => (
   <header className="bg">
@@ -12,7 +11,6 @@ const Header = () => (
       <p className="tc">A community of JavaScript developers in Detroit</p>
       <Nav />
     </div>
-    <style dangerouslySetInnerHTML={{ __html: sty }} />
   </header>
 )
 
