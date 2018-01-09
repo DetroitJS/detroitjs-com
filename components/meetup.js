@@ -4,7 +4,7 @@ import moment from 'moment'
 
 const formattedTime = time => moment(time).format('MMMM Do YYYY @ h:mm a')
 const formatContent = content => ({
-  __html: content.replace(/src="http\//gi, 'src="https\/')
+  __html: content.replace(/src="http\//gi, 'src="https/')
 })
 
 const Meetup = (props) => (
