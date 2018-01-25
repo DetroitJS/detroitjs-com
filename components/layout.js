@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import Header from './header'
 import Footer from './footer'
-import Snowflakes from 'react-snowflakes'
 
 const Layout = ({ children }) => (
   <div>
@@ -71,13 +70,6 @@ const Layout = ({ children }) => (
       }
     `}</style>
     </Head>
-    {new Date().getMonth() === 11 && (
-      <Snowflakes
-        numberOfSnowflakes={50}
-        snowflakeColor="rgba(0,0,0,.2)"
-        snowflakeChar="*"
-      />
-    )}
     <Header />
     {children}
     <Footer />
