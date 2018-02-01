@@ -9,21 +9,19 @@ const handle = app.getRequestHandler()
 
 app.prepare().then(() => {
   createServer((req, res) => {
-    // Be sure to pass `true` as the second argument to `url.parse`.
-    // This tells it to parse the query portion of the URL.
     const parsedUrl = parse(req.url, true)
     const { pathname } = parsedUrl
     const path = /\/blog\/(.*)\/?$/.exec(pathname)
 
     if (path && path[1]) {
       const slug = path[1].replace(/\//, '')
-      fs.readFile(`${__dirname}/content/${slug}.md`, 'utf8', function (err, contents) {
+      fs.readFile(`${__dirname}/content/${slug}.md`, 'utf8', function (err, content) {
         if (err) {
-          res.statusCode = 404
-          return app.render(req, res, '/_error', {})
+          res.statusCode = 500
+          app.render(req, res, '/_error', {})
+        } else {
+          app.render(req, res, '/post', Object.assign({}, parsedUrl, { content }))
         }
-
-        app.render(req, res, '/post', Object.assign({}, parsedUrl, { content: contents }))
       })
     } else {
       handle(req, res, parsedUrl)
