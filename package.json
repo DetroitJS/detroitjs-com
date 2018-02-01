@@ -7,10 +7,12 @@
   "author": "TJ <tj@tjmiller.co>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "test": "./node_modules/.bin/eslint components/*.js pages/*.js"
+    "start": "NODE_ENV=production node server.js",
+    "test": "./node_modules/.bin/eslint components/*.js pages/*.js",
+    "eslint:lint": "eslint --ext .js . pages components",
+    "eslint:fix": "eslint --ext .js . pages components --fix"
   },
   "dependencies": {
     "axios": "^0.16.0",
@@ -19,7 +21,9 @@
     "prop-types": "^15.5.7",
     "react": "^16",
     "react-dom": "^16",
-    "shortid": "^2.2.8"
+    "shortid": "^2.2.8",
+    "react-markdown": "^3.1.4",
+    "styled-components": "^3.1.5"
   },
   "devDependencies": {
     "eslint": "^3.19.0",
@@ -30,6 +34,6 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-react": "^6.10.3",
     "eslint-plugin-standard": "^3.0.1",
-    "styled-components": "^2.2.4"
+    "babel-plugin-styled-components": "^1.5.0"
   }
 }
