@@ -1,3 +1,7 @@
+---
+title: Demo Blog
+---
+
 # Hey! Sweet POst!
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Natoque penatibus et magnis dis. Semper feugiat nibh sed pulvinar proin gravida hendrerit lectus a. Sagittis vitae et leo duis ut diam quam nulla porttitor. Pellentesque pulvinar pellentesque habitant morbi. In arcu cursus euismod quis. Hac habitasse platea dictumst vestibulum rhoncus. Suspendisse sed nisi lacus sed. Donec adipiscing tristique risus nec. Neque ornare aenean euismod elementum nisi quis eleifend quam adipiscing. Fermentum et sollicitudin ac orci. Posuere lorem ipsum dolor sit. Amet consectetur adipiscing elit pellentesque habitant. Molestie at elementum eu facilisis sed odio. Lacus vel facilisis volutpat est velit egestas dui. Vel orLorem ipsum dolor amet heirloom kombucha hashtag vexillologist green juice four loko. Craft beer umami glossier portland, farm-to-table synth poke hammock master cleanse aesthetic humblebrag. You probably haven't heard of them iceland jianbing aesthetic, keffiyeh photo booth banjo ugh small batch shabby chic actually farm-to-table before they sold out wolf. Selfies +1 hashtag poutine taiyaki meditation.

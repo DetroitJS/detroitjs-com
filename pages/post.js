@@ -1,7 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import Markdown from 'react-markdown'
-import PropTypes from 'prop-types'
 
 class Post extends React.Component {
   static getInitialProps ({ query: { content } }) {
