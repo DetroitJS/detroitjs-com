@@ -7,10 +7,12 @@
   "author": "TJ <tj@tjmiller.co>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "test": "./node_modules/.bin/eslint components/*.js pages/*.js"
+    "start": "NODE_ENV=production node server.js",
+    "eslint": "eslint --ext .js .",
+    "eslint:fix": "eslint --ext .js --fix .",
+    "test": "npm run eslint"
   },
   "dependencies": {
     "axios": "^0.16.0",
@@ -19,7 +21,9 @@
     "prop-types": "^15.5.7",
     "react": "^16",
     "react-dom": "^16",
-    "shortid": "^2.2.8"
+    "shortid": "^2.2.8",
+    "react-markdown": "^3.1.4",
+    "frontmatter": "^0.0.3"
   },
   "devDependencies": {
     "eslint": "^3.19.0",

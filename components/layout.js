@@ -42,7 +42,7 @@ const Layout = ({ children }) => (
         href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"
       />
       <style
-        dangerouslySetInnerHtml={{
+        dangerouslySetInnerHTML={{
           __html: `
       @font-face {
         font-family: 'neutraface2Text-Bold';
