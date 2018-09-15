@@ -3,3 +3,8 @@
  *
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
+
+exports.modifyBabelrc = ({ babelrc }) => ({
+  ...babelrc,
+  plugins: babelrc.plugins.concat(['transform-decorators-legacy', 'transform-regenerator']),
+});
