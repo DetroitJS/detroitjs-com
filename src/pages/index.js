@@ -9,8 +9,8 @@ class IndexPage extends Component {
     meetups: PropTypes.array
   };
 
-  async componentDidMount() {
-    const res = await axios.get("https://detroitjs.sixlabs.io/events");
+  componentDidMount() {
+    const res = axios.get("https://detroitjs.sixlabs.io/events");
 
     this.setState({ meetups: res.data.data });
   }
