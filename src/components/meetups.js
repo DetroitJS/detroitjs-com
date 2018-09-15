@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Meetup from './meetup'
-import shortid from 'shortid'
+import React from "react";
+import PropTypes from "prop-types";
+import Meetup from "./meetup";
+import shortid from "shortid";
 
 const Meetups = props => (
   <div>
@@ -15,12 +15,12 @@ const Meetups = props => (
       />
     ))}
   </div>
-)
+);
 
 Meetups.propTypes = {
   meetups: PropTypes.array
-}
+};
 
-Meetups.displayName = 'Meetups'
+Meetups.displayName = "Meetups";
 
-export default Meetups
+export default Meetups;
