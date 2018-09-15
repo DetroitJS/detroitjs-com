@@ -1,0 +1,21 @@
+[data-reactroot] > * {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+[data-reactroot] > * > header + * {
+  flex: 1;
+}
+
+@font-face {
+  font-family: 'neutraface2Text-Bold';
+  src: url('/fonts/Neutraface2Text-Bold.eot');
+  src: local('â˜º'), url('/fonts/Neutraface2Text-Bold.woff') format('woff'), url('/fonts/Neutraface2Text-Bold.ttf') format('truetype'), url('/fonts/Neutraface2Text-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.branding [class*="headline"] {
+  font-family: 'neutraface2Text-Bold', sans-serif !important;
+}

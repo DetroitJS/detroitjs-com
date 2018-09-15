@@ -1,4 +1,11 @@
-.next/
-node_modules/
+# Project dependencies
+.cache
+node_modules
+yarn-error.log
+
+# Build directory
+/public
+.DS_Store
+
 *.log
 *.idea
