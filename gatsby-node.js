@@ -6,5 +6,5 @@
 
 exports.modifyBabelrc = ({ babelrc }) => ({
   ...babelrc,
-  plugins: babelrc.plugins.concat(['transform-regenerator']),
+  plugins: babelrc.plugins.concat(['transform-decorators-legacy', 'transform-regenerator']),
 });
