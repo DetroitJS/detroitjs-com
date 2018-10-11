@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import shortid from "shortid";
+import Layout from "../components/Layout.js";
 
 const BOOK = "📖";
 const GAME = "👾";
@@ -85,22 +86,24 @@ LearningLink.propTypes = {
 };
 
 const LearningPage = () => (
-  <div className="ph3">
-    <div className="measure lh-copy center">
-      <h1>Learning JavaScript Resources</h1>
-      <h4 className="f6 fw6">Legend</h4>
-      {legendItems.map(item => (
-        <LegendItem key={shortid.generate()} item={item} />
-      ))}
-
-      <h2 id="beginner">Beginner</h2>
-      <ul className="list pl0">
-        {learningLinks.map(link => (
-          <LearningLink key={shortid.generate()} link={link} />
+  <Layout>
+    <div className="ph3">
+      <div className="measure lh-copy center">
+        <h1>Learning JavaScript Resources</h1>
+        <h4 className="f6 fw6">Legend</h4>
+        {legendItems.map(item => (
+          <LegendItem key={shortid.generate()} item={item} />
         ))}
-      </ul>
+
+        <h2 id="beginner">Beginner</h2>
+        <ul className="list pl0">
+          {learningLinks.map(link => (
+            <LearningLink key={shortid.generate()} link={link} />
+          ))}
+        </ul>
+      </div>
     </div>
-  </div>
+  </Layout>
 );
 
 export default LearningPage;

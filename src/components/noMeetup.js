@@ -7,8 +7,11 @@ const NoMeetup = () => {
         <h2 className="f2 tc">No Meetups Currently Scheduled</h2>
         <div style={{ background: "#f7df1e" }}>
           <div className="center measure lh-copy pa3 meetup-content">
-            😭 Sorry! We don't have anything scheduled at the moment. Please
-            join our group over at{" "}
+            <span role="img" aria-label="crying face">
+              😭
+            </span>{" "}
+            Sorry! We don't have anything scheduled at the moment. Please join
+            our group over at{" "}
             <a
               target="_blank noopener noreferrer"
               href="https://www.meetup.com/Detroit-Javascript/"

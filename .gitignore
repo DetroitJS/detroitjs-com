@@ -9,3 +9,10 @@ yarn-error.log
 
 *.log
 *.idea
+
+**/*.un~
+**/.DS_Store
+**/.gitignore
+**/.npmignore
+**/.babelrc
+../**/dist/**
