@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: DetroitJS/detroitjs-com
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: meetups
+    label: Meetups
+    folder: meetups
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: date, label: Date, widget: date }
+      - { name: description, label: Body, widget: markdown }
+      - { name: url, label: url }

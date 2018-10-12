@@ -21,6 +21,7 @@ const Meetup = props => (
       <a
         className="tc black ba b--black mt2 pa2 bg-white hover-bg-light-yellow db no-underline"
         href={props.url}
+        target="_blank"
       >
         Event Details
       </a>
