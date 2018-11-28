@@ -7,6 +7,6 @@ WORKDIR /var/www
 RUN yarn install
 RUN yarn build
 
-EXPOSE 8000
+EXPOSE 9000
 
-CMD ["yarn", "start"]
+CMD ["yarn", "serve"]
