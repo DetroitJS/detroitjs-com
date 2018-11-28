@@ -11,7 +11,7 @@ const Meetups = props => (
         title={meetup.name}
         date={meetup.time}
         description={meetup.description}
-        url={meetup.event_url}
+        url={meetup.url}
       />
     ))}
   </div>

@@ -5,6 +5,7 @@
   "author": "TJ <tj@tjmiller.co>",
   "dependencies": {
     "axios": "^0.18.0",
+    "axios-jsonp": "^1.0.2",
     "babel-plugin-transform-regenerator": "^6.26.0",
     "gatsby": "^1.9.277",
     "gatsby-link": "^1.6.46",
